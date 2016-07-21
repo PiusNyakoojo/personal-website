@@ -1,0 +1,41 @@
+@import '../app.style';
+
+$header-height: 50px;
+$path-underline-color: purple;
+
+$path-font-size: 20px;
+
+#header {
+  position: fixed;
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+  background-color: $primary-bg-color;
+  text-align: center;
+  width: 100%;
+  @include background-shadow(20px);
+}
+
+.activePath {
+  border-bottom: 5px solid $path-underline-color;
+}
+
+#pathList {
+  bottom: 0px;
+  list-style-type: none;
+  color: $primary-font-color;
+  font-size: $path-font-size;
+
+  li {
+    display: inline-block;
+    margin: 0px 10px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        @extend .activePath;
+      }
+    }
+  }
+}

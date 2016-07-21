@@ -1,0 +1,8 @@
+<div id="header">
+  <ul id="pathList">
+    <li *ngFor="let path of pathNames">
+      <a routerLink="{{path | lowercase}}" routerLinkActive="activePath" >{{path}}</a>
+    </li>
+  </ul>
+</div>
+

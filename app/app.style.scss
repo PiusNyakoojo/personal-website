@@ -1,0 +1,26 @@
+$primary-bg-color: #333333;
+$secondary-bg-color: #111111;
+
+$shadow-color: black;
+
+$primary-font-color: white;
+$secondary-font-color: grey;
+
+$primary-font: "Gothic", serif;
+$primary-font-size: 15px;
+
+@mixin background-shadow($blur) {
+  -webkit-box-shadow: 0px 0px $blur $shadow-color;
+  -moz-box-shadow: 0px 0px $blur $shadow-color;
+  box-shadow: 0px 0px $blur $shadow-color;
+}
+
+a {
+	color: $primary-font-color;
+	font: $primary-font;
+	text-decoration: none;
+
+	&:link, &:hover, &:visited, &:active {
+		text-decoration: none;
+	}
+}
