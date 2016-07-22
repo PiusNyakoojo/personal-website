@@ -1,0 +1,9 @@
+@import './app/app.style';
+
+body {
+	margin: 0px;
+  	background-color: $secondary-bg-color;
+  	color: $primary-font-color;
+  	font: $primary-font;
+  	font-size: $primary-font-size;
+}

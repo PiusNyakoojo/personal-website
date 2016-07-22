@@ -1,36 +1,41 @@
 @import '../app.style';
 
 $header-height: 50px;
-$path-underline-color: purple;
+$path-underline-color: magenta;
 
 $path-font-size: 20px;
 
+$menu-horizontal-padding: 10px;
+$menu-vertical-padding: 10px;
+
 #header {
-  position: fixed;
+  position: relative;
   display: inline-block;
-  top: 0px;
-  left: 0px;
-  background-color: $primary-bg-color;
   text-align: center;
+  background-color: $primary-bg-color;
   width: 100%;
-  @include background-shadow(20px);
+  @include box-shadow(20px);
 }
 
 .activePath {
   border-bottom: 5px solid $path-underline-color;
 }
 
-#pathList {
-  bottom: 0px;
+#appbar-nav-menu {
+  margin: 0px;
+  display: inline-block;
   list-style-type: none;
+  text-align: center;
   color: $primary-font-color;
   font-size: $path-font-size;
 
   li {
     display: inline-block;
-    margin: 0px 10px;
+    margin: 0px $menu-horizontal-padding;
 
     a {
+      display: block;
+      padding: $menu-vertical-padding 0px;
       text-decoration: none;
 
       &:hover {

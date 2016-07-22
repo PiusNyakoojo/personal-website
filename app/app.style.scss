@@ -9,10 +9,18 @@ $secondary-font-color: grey;
 $primary-font: "Gothic", serif;
 $primary-font-size: 15px;
 
-@mixin background-shadow($blur) {
+$panel-width: 60%;
+
+@mixin box-shadow($blur) {
   -webkit-box-shadow: 0px 0px $blur $shadow-color;
   -moz-box-shadow: 0px 0px $blur $shadow-color;
   box-shadow: 0px 0px $blur $shadow-color;
+}
+
+@mixin text-shadow($blur) {
+	-webkit-text-shadow: 0px 0px $blur $shadow-color;
+  	-moz-text-shadow: 0px 0px $blur $shadow-color;
+  	text-shadow: 0px 0px $blur $shadow-color;
 }
 
 a {
@@ -23,4 +31,10 @@ a {
 	&:link, &:hover, &:visited, &:active {
 		text-decoration: none;
 	}
+}
+
+.panel {
+	width: $panel-width;
+	background-color: $primary-bg-color;
+	@include box-shadow(10px);
 }
