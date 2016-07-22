@@ -1,6 +1,5 @@
 @import '../app.style';
 
-$header-height: 50px;
 $path-underline-color: magenta;
 
 $path-font-size: 20px;
@@ -9,7 +8,10 @@ $menu-horizontal-padding: 10px;
 $menu-vertical-padding: 10px;
 
 #header {
+  z-index: 10;
   position: relative;
+  top: 0px;
+  left: 0px;
   display: inline-block;
   text-align: center;
   background-color: $primary-bg-color;
