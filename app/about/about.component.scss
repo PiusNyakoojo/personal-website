@@ -21,9 +21,15 @@ $title-margin-top: 200px;
 	height: 500px;
 }
 
+#documents-label {
+	width: 100%;
+	text-align: left;
+	padding-left: 20px;
+}
+
 #google-drive-frame {
-	margin-top: 5%;
-	margin-left: 5%;
+	background-color: white;
+	margin-top: 20px;
 	width: 90%;
-	height: 90%;
+	height: 70%;
 }

@@ -35,10 +35,9 @@ a {
 }
 
 .body {
-	overflow-y: scroll;
 	position: relative;
+	overflow-y:scroll;
 	width: 100%;
-	height: 1%;
 	text-align: center;
 }
 
@@ -50,4 +49,36 @@ a {
 	min-width: $panel-min-width;
 	background-color: $primary-bg-color;
 	@include box-shadow(10px);
+}
+
+@keyframes animateOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.1;
+		margin-top: 300px;
+
+	}
+}
+
+@keyframes animateIn {
+	from {
+		opacity: 0.1;
+		margin-top: 200px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
+.animateIn {
+	animation-name: animateIn;
+	animation-duration: 1s;
+}
+
+.animateOut {
+	animation-name: animateOut;
+	animation-duration: 1s;
 }

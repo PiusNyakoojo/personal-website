@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'about.component.html',
   styleUrls: ['about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnDestroy {
+	animateAway: boolean = false;
 
-  constructor() {}
-
-  ngOnInit() {
-  }
+	ngOnDestroy() {
+		this.animateAway = true;
+	}
 
 }
