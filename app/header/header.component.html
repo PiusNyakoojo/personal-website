@@ -1,6 +1,6 @@
 <div id="header">
 	<ul id="appbar-nav-menu">
-    	<li *ngFor="let path of pathNames">
+    	<li *ngFor="let path of pathList">
       		<a routerLink="{{path | lowercase}}" routerLinkActive="activePath" >{{path}}</a>
     	</li>
   	</ul>

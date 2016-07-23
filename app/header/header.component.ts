@@ -9,8 +9,6 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 })
 export class HeaderComponent {
-  pathNames: string[] = ["About", "Portfolio", "Lab", "Blog", "Contact"];
-
-
+  pathList: string[] = ["About", "Portfolio", "Lab", "Blog", "Contact"];
 
 }

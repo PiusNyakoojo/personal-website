@@ -1,6 +1,7 @@
 @import './app/app.style';
 
 body {
+	position: relative;
 	margin: 0px;
 	overflow-y: hidden;
   	background-color: $secondary-bg-color;
