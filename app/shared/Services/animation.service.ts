@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 export class AnimationService {
-	private _waitTime: number = 300;
+	private _waitTime: number = 200;
 
 	confirmNav: Observable<boolean>;
 

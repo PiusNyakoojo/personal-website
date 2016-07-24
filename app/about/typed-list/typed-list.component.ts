@@ -31,7 +31,7 @@ export class TypedListComponent implements OnInit {
 		'Dreamer',
 		'Experimentalist',
 		'Lover of learning!',
-		'Open sorcerer',
+		'Open Sourcerer',
 		'Level 100 Death Knight'
 	];
 
