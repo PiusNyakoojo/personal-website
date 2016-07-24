@@ -2,15 +2,58 @@
 	<div [ngClass]="{'animateIn': !animateAway, 'animateOut': animateAway}">
 		<div id="title">
 			<div id="name">Pius Nyakoojo</div>
-			<h1 id="occupation">Software Engineer</h1>
+			<pn-typed-list id="ocupation"></pn-typed-list>
 		</div><br>
 		<div id="details" class="panel">
-			lkjalfkjsd
+			<div class="panel-body">
+				<span>
+					<img id="main-image" src="app/shared/Images/baby-pius.jpg">
+					<!--<p *ngFor="let detail of detailParagraphList">{{detail}}</p> -->
+					<p>
+						Hi, welcome to my personal website!
+					</p>
+					<p>
+						My name is Pius and I love learning new things and applying that knowledge to make cool stuff.
+					</p>
+					<p>
+						In my free time I enjoy making games for the web, experimenting, jogging, playing tennis or 
+						eating green tea ice cream.
+					</p>
+					<p>
+						You can find most of the interesting software-related projects I’ve worked on in this 
+						<a [routerLink]="['/portfolio']">Portfolio</a>.
+					</p>
+					<p>
+						My <a [routerLink]="['/lab']">Lab</a> contains documentation of interesting experiments that I run. I expect most of the 
+						experiments will be related to genetics, acoustic physics and robotics; but I can’t promise 
+						that something like plant morphology or entomology won’t be there, as those are quite interesting 
+						subjects as well.
+					</p>
+					<p>
+						To bring everything together is what this <a [routerLink]="['/blog']">Blog</a> is for. Here I’ll talk about whatever’s on my 
+						mind as if no one is listening.
+					</p>
+					<p>
+						I feel that it’s very important to empower ourselves through sharing alternate perspectives.
+		 				When we empower ourselves, we unconsciously give others the permission to do the same.
+					</p>
+				</span>
+			</div>
 		</div>
-		<div id="documents" class="panel">
-			<h3 id="documents-label">Google Drive - Documents</h3>
+		<div id="quote-panel" class="panel">
+			<h3 class="panel-title">Quote of the day</h3>
 			<hr>
-			<iframe id="google-drive-frame" src="https://drive.google.com/embeddedfolderview?id=0B-dJ9sll-14wTkxUR0hVS05zZkk#grid" frameborder="0"></iframe>
+			<div id="quote" class="panel-body">
+				“Your playing small does not serve the world. There is nothing enlightened about shrinking so that other people won’t feel insecure around you. As we are liberated from our own fear, our presence automatically liberates others.” - Marianne Williamson
+			</div>
+		</div>
+		<div id="documents-panel" class="panel">
+			<h3 class="panel-title">Google Drive - Documents</h3>
+			<hr>
+			<div class="panel-body">
+				<iframe id="google-drive-frame" src="https://drive.google.com/embeddedfolderview?id=0B-dJ9sll-14wTkxUR0hVS05zZkk#grid" frameborder="0"></iframe>
+			</div>
+			
 		</div>
 	</div>
 	

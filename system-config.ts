@@ -41,6 +41,9 @@ const barrels: string[] = [
   'app/blog',
   'app/contact',
   'app/shared/background-view',
+  'app/typed-list',
+  'app/about/typed-list',
+  'app/footer',
   /** @cli-barrel */
 ];
 

@@ -1,7 +1,5 @@
 @import '../app.style';
 
-$path-underline-color: magenta;
-
 $path-font-size: 20px;
 
 $menu-horizontal-padding: 10px;
@@ -19,7 +17,7 @@ $menu-vertical-padding: 10px;
 }
 
 .activePath {
-  border-bottom: 5px solid $path-underline-color;
+  border-bottom: 5px solid $primary-link-color;
 }
 
 #appbar-nav-menu {
@@ -35,6 +33,7 @@ $menu-vertical-padding: 10px;
     margin: 0px $menu-horizontal-padding;
 
     a {
+      color: $primary-font-color;
       display: block;
       padding: $menu-vertical-padding 0px;
       text-decoration: none;
