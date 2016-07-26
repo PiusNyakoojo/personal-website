@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
@@ -12,12 +12,15 @@ import { ListItemComponent } from './list-item.component';
   directives: [ListItemComponent]
 })
 
-export class ListComponent {
+export class ListComponent implements OnInit {
+	@Input() listType: string;
 	@Input() searchQuery: string;
 
 	items: FirebaseListObservable<any[]>;
 
-	constructor(af: AngularFire) {
-		this.items = af.database.list('items');
+	constructor(private af: AngularFire) { }
+
+	ngOnInit() {
+		this.items = this.af.database.list(this.listType);
 	}
 }

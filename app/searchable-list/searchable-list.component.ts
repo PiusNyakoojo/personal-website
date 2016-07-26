@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
+import { Router } from '@angular/router';
 
 import { AnimationService } from '../shared/Services/animation.service';
 import { CompletedAnimation } from '../shared/Guards/animation.guard';
@@ -15,12 +16,17 @@ import { ListComponent } from './list/list.component';
   directives: [SearchFilterComponent, ListComponent]
 })
 
-export class SearchableListComponent  implements CompletedAnimation {
+export class SearchableListComponent  implements CompletedAnimation, OnInit {
 	query: string;
-	
+	listType: string;
+
 	animateAway: boolean = false;
 
-	constructor(private animService: AnimationService) { }
+	constructor(private animService: AnimationService, private router: Router) { }
+
+	ngOnInit() {
+		this.listType = this.router.url.substr(1);
+	}
 
 	completedAnimation(): Observable<boolean> | boolean {
 		this.animateAway = true;

@@ -1,2 +1,50 @@
 @import '../../app.style';
 
+$max-image-height: 80px;
+$number-of-lines: 10;
+
+
+$header-font-size: 18px;
+
+.item-header {
+	margin: 5px 0px;
+	font-size: $header-font-size;
+	
+	* {
+		display: inline-block;
+	}
+	
+
+	.item-date {
+		float: right;
+	}
+}
+
+.item-image {
+	float: left;
+	padding-right: 10px;
+	max-height: $max-image-height;
+}
+
+.item-description {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: $panel-body-font-size;
+	max-height: $max-image-height;
+}
+
+.item-tags {
+	ul {
+		padding: 0px;
+		margin: 0px;
+		display: inline-block;
+		list-style-type: none;
+
+		li {
+			margin: 5px 5px;
+			padding: 5px;
+			display: inline-block;
+			background-color: #444444;
+		}
+	}
+}
