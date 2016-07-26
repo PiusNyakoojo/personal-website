@@ -2,9 +2,7 @@
 import { RouterConfig, provideRouter } from "@angular/router";
 
 import { AboutComponent } from './about/';
-import { PortfolioComponent } from './portfolio/';
-import { LabComponent } from './lab/';
-import { BlogComponent } from './blog/';
+import { SearchableListComponent } from './searchable-list/';
 import { ContactComponent } from './contact/';
 
 import { AnimationGuard } from './shared/Guards/animation.guard';
@@ -12,10 +10,10 @@ import { AnimationGuard } from './shared/Guards/animation.guard';
 
 const APP_ROUTES: RouterConfig = [
 	{ path: 'about', component: AboutComponent, canDeactivate: [AnimationGuard] },
-	{ path: 'portfolio', component: PortfolioComponent },
-	{ path: 'lab', component: LabComponent },
-	{ path: 'blog', component: BlogComponent },
-	{ path: 'contact', component: ContactComponent },
+	{ path: 'portfolio', component: SearchableListComponent, canDeactivate: [AnimationGuard] },
+	{ path: 'lab', component: SearchableListComponent, canDeactivate: [AnimationGuard] },
+	{ path: 'blog', component: SearchableListComponent, canDeactivate: [AnimationGuard] },
+	{ path: 'contact', component: ContactComponent, canDeactivate: [AnimationGuard] },
 	{ path: '', redirectTo: '/about' }
 ];
 

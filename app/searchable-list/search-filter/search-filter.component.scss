@@ -1,0 +1,14 @@
+@import '../../app.style';
+
+#searchBar {
+	font-size: $primary-font-size;
+	margin: 20px 10%;
+	padding: 5px;
+	width: 80%;
+	outline: none;
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}

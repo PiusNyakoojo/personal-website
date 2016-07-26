@@ -9,3 +9,11 @@ body {
   	font: $primary-font;
   	font-size: $primary-font-size;
 }
+
+::selection {
+	background: $secondary-bg-color;
+}
+
+::-moz-selection {
+	background: $secondary-bg-color;
+}

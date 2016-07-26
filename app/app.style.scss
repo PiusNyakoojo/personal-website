@@ -11,7 +11,11 @@ $primary-link-color: magenta;
 $primary-font: "Gothic", serif;
 $primary-font-size: 15px;
 
-$header-height: 50px;
+$header-height: 48px;
+
+
+$panel-list-horiz-margin: 10px;
+$panel-list-horiz-large-margin: 30px;
 
 $panel-width: 60%;
 $panel-min-width: 500px;
@@ -41,24 +45,46 @@ a {
 
 .body {
 	position: relative;
-	overflow-y:scroll;
+	overflow-y: auto;
 	width: 100%;
-	height: calc(100vh - 50px);
+	height: calc(100vh - 48px);
 	text-align: center;
 }
 
-.panel {
-	margin: 30px 0px;
-	text-align: left;
+.panel-list {
+
+	padding: 0px;
+	margin: 0px;
 	display: inline-block;
+	list-style-type: none;
+
+	li {
+		@extend .panel;
+	}
+
+	&:first-child {
+		margin-top: $panel-list-horiz-large-margin;		
+	}
+
+	&.large-gap {
+		li {
+			margin: $panel-list-horiz-large-margin 0px;
+		}
+	}
+}
+
+.panel {
 	width: $panel-width;
 	min-width: $panel-min-width;
+	margin: $panel-list-horiz-margin 0px;
+	text-align: left;
+	display: inline-block;
 	background-color: $primary-bg-color;
 	@include box-shadow(10px);
 	
 	.panel-title {
-		width: 100%;
 		margin-left: 20px;
+		margin-right: 10px;
 	}
 
 	.panel-body {
