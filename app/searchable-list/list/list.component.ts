@@ -21,6 +21,6 @@ export class ListComponent implements OnInit {
 	constructor(private af: AngularFire) { }
 
 	ngOnInit() {
-		this.items = this.af.database.list(this.listType);
+		this.items = this.af.database.list('/' + this.listType);
 	}
 }

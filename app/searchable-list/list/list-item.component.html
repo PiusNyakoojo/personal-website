@@ -22,8 +22,8 @@
 	<div>
 		<hr>
 		<div class='item-tags' *ngIf="content?.tags">
-			<ul *ngFor="let tag of content.tags">
-				<li>{{tag}}</li>
+			<ul *ngFor="let tag of content.tags | mapToIterable">
+				<li>{{tag.$key}}</li>
 			</ul>
 		</div>
 	</div>

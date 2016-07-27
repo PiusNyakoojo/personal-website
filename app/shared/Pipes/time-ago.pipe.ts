@@ -1,5 +1,4 @@
-import { Pipe } from '@angular/core';
-import { PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
 	name: 'timeAgo'
@@ -9,8 +8,8 @@ export class TimeAgoPipe implements PipeTransform {
 
 	transform(value: string, args: any[]): string {
 
-		const now: number = (new Date()).getMilliseconds();
-		const date: number = (new Date(value)).getMilliseconds();
+		const now: number = (new Date()).getTime();
+		const date: number = (new Date(value)).getTime();
 
 		const time = [
 			{
@@ -38,7 +37,7 @@ export class TimeAgoPipe implements PipeTransform {
 		];
 
 		for (let i = 0; i < time.length; i++) {
-			if (time[i].value !== 0) {
+			if (time[i].value > 0) {
 				return time[i].value + ' ' + time[i].unit + (time[i].value > 1 ? 's' : '') + ' ago';
 			}
 		}
