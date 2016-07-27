@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+
+import { AnimationService } from '../shared/Services/animation.service';
+import { CompletedAnimation } from '../shared/Guards/animation.guard';
 
 @Component({
   moduleId: module.id,
@@ -6,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'contact.component.html',
   styleUrls: ['contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements CompletedAnimation {
+	animateAway: boolean = false;
 
-  constructor() {}
+	constructor(private animService: AnimationService) { }
 
-  ngOnInit() {
-  }
+	completedAnimation(): Observable<boolean> | boolean {
+		this.animateAway = true;
+		return this.animService.confirmNav.take(1);
+	}
 
 }
