@@ -2,6 +2,10 @@
 
 $margin-from-top: 80px;
 
+.body:first-child {
+	margin-top: $margin-from-top;
+}
+
 #media-icons {
 	margin-top: $margin-from-top;
 
