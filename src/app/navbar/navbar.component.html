@@ -1,0 +1,7 @@
+<div id='navbar'>
+    <ul id='navbar-menu'>
+        <li *ngFor='let path of pathList'>
+            <a routerLink='{{path | lowercase}}' routerLinkActive='activePath'>{{ path }}</a>
+        </li>
+    </ul>
+</div>

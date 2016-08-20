@@ -1,6 +1,0 @@
-<div class="body">
-	<div [ngClass]="{'animateIn': !animateAway, 'animateOut': animateAway}">
-		<pn-search-filter [listType]="listType" (searchQuery)="query = $event"></pn-search-filter>
-		<pn-list [listType]="listType" [searchQuery]="query"></pn-list>
-	</div>
-</div>
