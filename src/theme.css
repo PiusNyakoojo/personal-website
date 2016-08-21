@@ -1,0 +1,17 @@
+body {
+	position: relative;
+	margin: 0px;
+	overflow-y: hidden;
+  	background-color: #111111;
+  	color: white;
+  	font: "Gothic", serif;
+  	font-size: 16px;
+}
+
+::selection {
+	background: #111111;
+}
+
+::-moz-selection {
+	background: #111111;
+}
